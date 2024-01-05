@@ -7,7 +7,8 @@ Agenda for the day
 2. learning git cli
 3. how to create pr and review 
 4. Git branching strategy used in big enterprises
+   
 ############ break #####################
 
-5. Using Terraform to create IAM user/roles/policies in aws
-6. best practices 
+6. Using Terraform to create IAM user/roles/policies in aws
+7. best practices 
