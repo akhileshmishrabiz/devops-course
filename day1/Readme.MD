@@ -9,7 +9,9 @@ Agenda for the day
 3. AWS fundamentals and console overview
 4. AWS networking fundamentals
 5. AWS firewall -- Security groups and NACL
+
 ####### small break ##############################
+
 6. Deploying VPC, private.public subnet, routers, nat gateway, internet gateway, and private and public EC2 instances manually from console
 #### Small break ###############
 7. Basic of IAM 
