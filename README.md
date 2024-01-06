@@ -18,10 +18,15 @@ I will start from fundamentals to advance, ensuring you learn the DevOps tools i
 ++++++++++++++++++++
 
 AWS Services -> ec2, iam, s3, eks, route53, cloud watch, sns/sqs, Lambda, ecs fargate, step functions
+
 Linux -> Topics that are useful for a DevOps engineer. I will also cover the basics of shell scripts.
+
 Terraform -> Everything about Terraform. Will teach you how to write terraform code like a pro.
+
 Python -> Python fundamentals, python modules useful for DevOps role
+
 Github actions -> from basics to advanced concepts, by the end, you will be able to write production-grade CICD pipelines
+
 Docker -> I will basics of docker, writing docker files, deploying/managing docker containers, and best practices.
 
 I will also help with  real-world projects to put in resumes, resume and LinkedIn profile optimization, interview tips, and mock interviews.
