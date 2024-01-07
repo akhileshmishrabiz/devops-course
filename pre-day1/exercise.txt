@@ -1,0 +1,14 @@
+**Part1:**
+# Go to your home directory and do everything as per the instruction.
+1. Create the below folder struture.
+dir1/dir11/dir111, dir1/dir11/dir222, dir1/dir22.
+2. Create the below file structure.
+dir1/file1, dir1/dir11/file11, dir1/dir11/file22, dir1/dir11/dir222/file222, dir1/dir22/file22
+3. list all the paths using ls comand and its options.
+4. Navigate to all these paths using cd with absolute and relative path.
+5. Use nano/vi to write to files and save them.
+6. use cp to copy/overwrite the files to different dir/file.
+7. use mv to rename file and move files to different paths.
+9. Understand difference between normal user and root user and when to use sudo prefix before running commands.
+10. Understand the file permissions and modify the files
+11. Create a basic shell script, set the executable permissions and run the script.
