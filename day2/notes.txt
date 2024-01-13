@@ -1,1 +1,5 @@
 # variables precedance priority -> .tfvars > variables default > cmd li
+
+Why to use a terraform state?
+
+How does state locking help in terraforming?
