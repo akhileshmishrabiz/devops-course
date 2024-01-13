@@ -1,5 +1,10 @@
 # variables precedance priority -> .tfvars > variables default > cmd li
+# var.var_name  "soemstringwith${var.vpc_name}" # string interpolation -> ${var.vpc_name} -> ${}
 
 Why to use a terraform state?
 
 How does state locking help in terraforming?
+
+
+
+
