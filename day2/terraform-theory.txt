@@ -26,6 +26,24 @@ Terraform is Cloud agnostic, meaning you can use the same configuration files to
   However, any cloud provider can use the same concepts and syntax.
 
 
+** What is Terraform state? **
+The Terraform state file is a JSON or binary file that tracks the resources created and managed by Terraform. It stores the following.
+
+Resource Metadata — includes details about the resources managed by Terraform, such as the resource type, ID, name, and attributes.
+Dependencies — keeps track of the dependencies between resources.
+Input Variables — stores values of input variables used in the Terraform configuration.
+Output — stores the value of any outputs defined in the Terraform configuration.
+Terraform also supports remote state, an industry-standard method of storing state files. I will talk more about terraform state management in another blog.
+
+At the time of writing terraform supports below remote state.
+
+Terraform Cloud
+Amazon S3
+Azure Blob Storage
+Google Cloud Storage
+HashiCorp Consul
+HTTP Backend
+
 ** How to use the If/Else statement in Terraform? **
 
 https://medium.com/living-devops/if-else-statement-in-terraform-is-much-more-powerful-than-you-think-311a914f0f83
