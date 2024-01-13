@@ -1,5 +1,22 @@
 ** Terraform **
 
+
+WHY IAC?
+Before IAC (Infra as code) people used to do the resource deployment manually. It had issues like
+- Need manual intervention every time we need to deploy some resources
+- Every time it takes the same amount of time to deploy the same set of resources.
+- There are great chances of making configuration errors that could cause serious outages
+- No way to easily create/destroy a set of resources for various environments such as testing, and staging.
+- Hard to ensure security and compliance in large infrastructure
+
+Then we got the idea of Having the infra defined as a code or configuration. It solved all above problems that we talked about.
+- Same infra can easily be deployed and destroyed as many times as we need to
+- No human intervention is required 
+- Repeatable infra
+- we can define the security policies for complete infra using the code
+- It takes just few minutes/seconds to deploy the large infra
+- infra can be versioned and shared across a team
+
 ## History of Terraform
 
 https://medium.com/living-devops/what-is-infrastructure-as-code-and-how-terraform-became-synonyms-for-iac-fff2f3d9b935
