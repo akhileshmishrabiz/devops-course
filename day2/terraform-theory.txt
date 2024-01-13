@@ -1,0 +1,37 @@
+** Terraform **
+
+## History of Terraform
+
+https://medium.com/living-devops/what-is-infrastructure-as-code-and-how-terraform-became-synonyms-for-iac-fff2f3d9b935
+
+What is Terraform?
+
+Terraform is an open-source infrastructure as code (IaC) tool, developed by Hashicorp. Terraform uses declarative language, and HCL (Hashicorp Configuration Language)code to define its resources. 
+You can also use JSON to define resources if you love to make things extra complicated for no reason.
+
+It’s built in Golang (Go), which gives it much power to create different infrastructure pieces in parallel. It makes it reliable by taking advantage of Go’s strong type-checking and error-handling capabilities.
+
+**Why Terraform?**
+
+Terraform is Idempotent, meaning you can run the same code multiple times and it will give you the same result.
+
+It’s repeatable, you can use the same configuration to provide infra for multiple environments(prod, dev, and staging).
+
+It can be modularized. You can split your configuration into small, independent parts. It supports both, public and private modules.
+
+Managing dependencies(explicit and implicit dependencies) is a cakewalk in Terraform.
+
+Terraform is Cloud agnostic, meaning you can use the same configuration files to provision infra in multiple cloud platforms.
+  That doesn’t mean the same line of code can be deployed in any cloud, of course, you need to write different code using specific providers.
+  However, any cloud provider can use the same concepts and syntax.
+
+
+** How to use the If/Else statement in Terraform? **
+
+https://medium.com/living-devops/if-else-statement-in-terraform-is-much-more-powerful-than-you-think-311a914f0f83
+
+** How to use loops in Terraform? **
+
+https://medium.com/living-devops/terraform-meta-arguments-you-cannot-live-without-count-and-for-each-c782c00a9f78
+
+  
