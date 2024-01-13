@@ -1,6 +1,10 @@
 # variables precedance priority -> .tfvars > variables default > cmd li
 # var.var_name  "soemstringwith${var.vpc_name}" # string interpolation -> ${var.vpc_name} -> ${}
 
+# dependencies 
+# 1 implicit dependency -> aws_vpc.main.id # refrencing vpc
+# 2 explicit dependency -> depends_on = [ aws_vpc.main  ]
+
 Why to use a terraform state?
 
 How does state locking help in terraforming?
