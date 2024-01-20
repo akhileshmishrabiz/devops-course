@@ -1,0 +1,92 @@
+IAM identities: can be authenticated and authorized to interact with AWS resources.
+
+  User: It can be a human user or machine user. Human users are people like us, while machine users are service account which will give a machine/program to use while running.
+        Users can be added to groups, or can stay without any groups.
+
+  Groups: This is a set of IAM users with similar set of permissions.
+          A user can be part of one or more group. 
+          IAM roles are assigned at group level.
+          Users in specific group can access the resources based on the role attached to it.
+
+  roles: a role is intended to be assumable by anyone who needs it. A role does not have standard long-term credentials such as a password or access keys associated with it.
+        It provide a short term creds when someone assume that role. 
+        roles to delegate access to users, applications, or services that don't normally have access to your AWS resources.
+
+
+IAM Principals:  IAM principal represents a person or system that interacts with AWS resources
+  Users:
+  Groups:
+  Roles:
+  Federated Users:
+
+**Policies and permissions in IAM**
+  Identity-based policies – Identity-based policies grant permissions to an identity.
+                            Attach managed and inline policies to IAM identities (users, groups to which users belong, or roles).
+ 
+                            Attach inline policies to resources
+      Managed policies: Standalone identity-based policies that you can attach to multiple users, groups, and roles in your AWS account.
+                  Their lifecycle isn't depends on Identities they are attached to.
+                  AWS managed policies: managed by AWS.
+                  Customer managed policies: Created my us and they provide more precise control over permissions.
+        
+      Inline policies: Policies that you add directly to a single user, group, or role. 
+                 They maintain a strict one-to-one relationship between a policy and an identity. 
+                 They are deleted when you delete the identity.
+
+ Resource-based policies - They are JSON policy documents that you attach to a resource such as S3 bucket.
+                           Resource-based policies are inline policies.
+
+**JSON policy document structure**
+A statement is contained within a series of elements.
+
+Version – Specify the version of the policy language that you want to use. Recommended version 2012-10-17 . 
+Statement – Act as a container for one or more statement in a policy.
+
+  Sid (Optional) – Include an optional statement ID to differentiate between your statements.
+  Effect – Use Allow or Deny to indicate whether the policy allows or denies access.
+  Principal - If you create a resource-based policy, you must indicate the account, user, role, or federated user to which you would like to allow or deny access
+  Action – Include a list of actions that the policy allows or denies.
+  Resource –  a list of resources to which the actions apply. If you create a resource-based policy, this element is optional. 
+  Condition (Optional) – Specify the circumstances under which the policy grants permission.
+
+#######################  EXAMPLE  #####################################
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "FirstStatement",
+      "Effect": "Allow",
+      "Action": ["iam:ChangePassword"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SecondStatement",
+      "Effect": "Allow",
+      "Action": "s3:ListAllMyBuckets",
+      "Resource": "*"
+    },
+    {
+      "Sid": "ThirdStatement",
+      "Effect": "Allow",
+      "Action": [
+        "s3:List*",
+        "s3:Get*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::confidential-data",
+        "arn:aws:s3:::confidential-data/*"
+      ],
+      "Condition": {"Bool": {"aws:MultiFactorAuthPresent": "true"}}
+    }
+  ]
+}
+#######################################################################
+
+
+
+
+
+
+
+Things to practuce : Cross account access
+https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html
