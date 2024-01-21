@@ -1,0 +1,50 @@
+What is Docker?
+Docker is a platform that enables the creation, deployment, and execution of applications in lightweight, portable containers. Containers encapsulate applications and their dependencies, ensuring consistency across various environments.
+
+Why Docker?
+Docker simplifies application deployment by packaging applications and their dependencies into containers. It promotes consistency, scalability, and efficiency, allowing developers to work seamlessly across different environments, from development to production.
+
+Difference between Docker and VM?
+Docker containers share the host OS kernel, making them lightweight and faster compared to Virtual Machines (VMs) that require a full OS. VMs virtualize entire hardware, including the OS, while Docker isolates applications and their dependencies, optimizing resource utilization.
+
+Advantages of Docker:
+
+Portability: Docker containers run consistently across various environments, reducing compatibility issues.
+Resource Efficiency: Containers share the host OS kernel, consuming fewer resources compared to VMs.
+Isolation: Containers provide isolated environments for applications, enhancing security and preventing conflicts between dependencies.
+Scalability: Docker facilitates easy scaling of applications by creating and deploying multiple instances of containers.
+
+
+
+Dockerfile: It's like a recipe or blueprint that defines how a Docker image should be built. 
+It contains instructions to install dependencies, set up configurations, and specify what needs to be included in the image.
+
+Docker Image: Think of it as a snapshot or template created from a Dockerfile.
+It's a lightweight, standalone, and executable package that includes the application and its dependencies. You can build multiple containers from the same image.
+
+Docker Container: An instance of a Docker image. It's a runnable, isolated environment that encapsulates the application and its dependencies. 
+Containers are created from Docker images and can be started, stopped, moved, and deleted, providing a consistent environment across different platforms.
+
+
+Docker provides various networking options:
+
+Default Bridge Network:
+    When you install Docker, it creates a default bridge network named bridge.
+    Containers connected to this network can communicate with each other using container names as hostnames.
+
+Host Network:
+    Containers can share the host's network stack, using the --network host option during container creation.
+    This allows the container to have the same network namespace as the host, essentially bypassing Docker's network isolation.
+
+Custom Bridge Networks:
+    Users can create custom bridge networks using the docker network create command.
+    Containers connected to the same custom bridge network can communicate with each other by their container names.
+
+Container-to-Container Communication:
+    Containers on the same network can communicate using their container names as hostnames or by their IP addresses.
+    Docker DNS automatically resolves container names to their corresponding IP addresses.
+
+    Port Mapping:
+  Docker allows you to map ports between the host and the container using the -p option.
+  This enables external access to specific container services.
+
