@@ -1,0 +1,48 @@
+# Pull an Image from Docker Hub
+docker pull <image_name>:<tag>
+docker pull ubuntu:latest
+
+# Run a Container
+docker run <options> <image_name>:<tag>
+
+
+# listing the docker containers
+docker ps
+docker ps -a
+
+
+# Stop a Running Container
+docker stop <container_id or container_name>
+
+# Start a container 
+docker start <container_id or container_name>
+
+
+# Remove a Container
+docker rm <container_id or container_name>
+
+# Listing docker images locally
+docker image list
+# Remove a Docker Image
+docker rmi <image_id or image_name>:<tag>
+
+# Build a Docker Image from a Dockerfile
+docker build -t <image_name>:<tag> <path_to_Dockerfile>
+docker build -t my_image:latest .
+
+# View docker logs
+docker logs <container_id or container_name>
+
+# Execute a Command in a Running Container  
+docker exec -it <container_id or container_name> <command>
+
+
+## Volumes
+# local host path
+docker run -d -v /path/on/host:/path/in/container my_image
+
+# Mount the Current Directory into a Container
+docker run -d -v $(pwd):/path/in/container my_image
+
+
+  
