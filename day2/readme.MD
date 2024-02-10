@@ -1,3 +1,4 @@
+# install tfenv : https://github.com/tfutils/tfenv
 This is day 2 of the 3-month DevOps course.
 
 Timing - 12 - 3 PM meeting link: https://meet.google.com/fvo-fxvx-pug Agenda for the day
