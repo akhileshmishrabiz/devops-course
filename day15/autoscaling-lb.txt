@@ -1,0 +1,19 @@
+
+1. created one ec2 instacne with httpd installed and  put html content on index.html on path /var/www/html
+  sudo su -
+yum update -y
+yum install httpd -y
+systemctl start httpd # systemctl <action> <service>
+echo "<h1> Hello world : $(hostname) </h1>" > /var/www/html/index.html
+
+  Once its done, use the public ip of ec2 vm to access the ec2
+
+2. ALB -> application with a target group on backend
+  launch 2 VM with httpd installed and some content on /var/www/html/index.html. Make sure these vm have security group attached that has inbound and outbound http ports open
+
+  create a target group and add 2 vms in that, keep all setting default. settings like health check on port 80 etc.
+  then create one application load balancer with internet access, public ip and target as target group. make sure this alb has security group that allow inbound connction on port 80.
+  once ALB is created and its running fine. use the dns name for it to access via internet.
+
+3. create a launch teplate. target group, ALB, auto scaling group and attach the alb to auto scaling group
+  try to access the ALB dns to access  the html page
