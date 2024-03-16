@@ -1,40 +1,93 @@
+#######  Git Configuration ############
+# Set username globally
 git config --global user.name "Your Name"
+
+# Set email globally
 git config --global user.email "your.email@example.com"
+
+# List all configurations
 git config --list
-##################
+
+##### Git Help
+# Show help for Git configuration
 git config help
+
+# Show help for configuring Git
 git help config
-#############
+
+##################################
+# Initialize a new Git repository
 git init
+
+# Display the status of the repository
 git status
-git add .  # or git add filename or git add -A 
+
+# Add all changes to the staging area
+git add .
+
+# or add specific file(s) to the staging area
+# git add filename
+# or add all changes including untracked files to the staging area
+# git add -A
+
+# Commit changes with a specified message
 git commit -m "Your commit message here"
-git branch branch_name # to create a new branch
-git checkout branch_name # to switch to a branch
-git checkout  -b branch_name #  create and switch
 
-git merge branch_name  # merge changes into another branch
+####### Branch Operations ###########
+# Create a new branch
+git branch branch_name
+
+# Switch to the specified branch
+git checkout branch_name
+
+# Create and switch to a new branch
+git checkout -b branch_name
+
+# Merge changes from another branch into the current branch
+git merge branch_name
+
+# Add a remote repository
 git remote add origin remote_repository_url
-git push -u origin branch_name # this will also set the upstream branch with -u
+
+# Push changes to a remote repository and set the upstream branch. 
+# This will allow you to run push and pull commands without mentioning the branch name
+git push -u origin branch_name
+
+# Fetch and merge changes from a remote repository
 git pull origin branch_name
-git log 
+
+# Display commit history
+git log
+
+# Display compact commit history
 git log --oneline
-############################################
 
-git reset <filename > # Unstage a file from the staging area and move to work directory
-git reset  # Unstage all the files and move them to the working directory
+# Unstage a file from the staging area
+git reset <filename>
 
+# Unstage all files from the staging area
+git reset
 
-
-#################################################
+# Clone a repository from a remote URL
 git clone <remote-repo-url>
+
+# List all remote repositories
 git remote -v
+
+# List all branches, including remote-tracking branches
 git branch -a
-git pull origin  main
+
+# Fetch and merge changes from the remote "main" branch
+git pull origin main
+
+# Push changes to the remote "main" branch
 git push origin main
-###########
 
+# List branches that have been merged into the current branch
 git branch --merged
-git merge branch # It will merge the branch to your current branch
 
+# Merge the specified branch into the current branch
+git merge branch
+
+# Delete the specified branch
 git branch -d branch
