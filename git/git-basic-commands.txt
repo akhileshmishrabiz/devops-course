@@ -62,6 +62,9 @@ git log
 # Display compact commit history
 git log --oneline
 
+# Displays the commit history along with the files that were modified, added, or deleted in each commit
+git log --stat
+
 # Unstage a file from the staging area
 git reset <filename>
 
