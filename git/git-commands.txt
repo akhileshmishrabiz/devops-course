@@ -7,7 +7,7 @@ git help config
 #############
 git init
 git status
-git add .
+git add .  # or git add filename or git add -A 
 git commit -m "Your commit message here"
 git branch branch_name # to create a new branch
 git checkout branch_name # to switch to a branch
@@ -15,7 +15,26 @@ git checkout  -b branch_name #  create and switch
 
 git merge branch_name  # merge changes into another branch
 git remote add origin remote_repository_url
-git push -u origin branch_name
+git push -u origin branch_name # this will also set the upstream branch with -u
 git pull origin branch_name
 git log 
-git log --one-line 
+git log --oneline
+############################################
+
+git reset <filename > # Unstage a file from the staging area and move to work directory
+git reset  # Unstage all the files and move them to the working directory
+
+
+
+#################################################
+git clone <remote-repo-url>
+git remote -v
+git branch -a
+git pull origin  main
+git push origin main
+###########
+
+git branch --merged
+git merge branch # It will merge the branch to your current branch
+
+git branch -d branch
