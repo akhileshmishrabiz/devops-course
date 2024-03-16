@@ -1,0 +1,21 @@
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --list
+##################
+git config help
+git help config
+#############
+git init
+git status
+git add .
+git commit -m "Your commit message here"
+git branch branch_name # to create a new branch
+git checkout branch_name # to switch to a branch
+git checkout  -b branch_name #  create and switch
+
+git merge branch_name  # merge changes into another branch
+git remote add origin remote_repository_url
+git push -u origin branch_name
+git pull origin branch_name
+git log 
+git log --one-line 
