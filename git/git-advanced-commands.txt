@@ -1,4 +1,5 @@
 git diff # will show the file changes for  the unstaged file
+git diff commit-hash1 commit-hash2 # shows the difference in both commits 
 git checkout filename # to undo the changes in an unstaged file
 git commit --amend -m "commit message " # to change the commit message, this will change the commit hash as well
 git commit --amend  # to change the commit message without changing the commit hash
