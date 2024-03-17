@@ -1,0 +1,45 @@
+Exercise: Setting Up and Committing Changes
+Objective:
+Learn how to initialize a Git repository, make changes to files, stage changes, and commit them.
+Instructions:
+Initialization:
+
+Open your terminal or command prompt.
+Navigate to a directory where you want to create your Git project.
+Initialize a new Git repository named "my_project".
+Create Files:
+
+Create a new text file named "hello.txt" in the project directory.
+Add some text content to "hello.txt", e.g., "Hello, world!"
+Check Status and Add Changes:
+
+Use the git status command to check the status of your repository.
+Notice that "hello.txt" is listed as an untracked file.
+Add Changes to Staging Area:
+
+Add "hello.txt" to the staging area using git add hello.txt.
+Commit Changes:
+
+Commit the changes to the repository with a descriptive message using git commit -m "Add hello.txt".
+Modify File:
+
+Open "hello.txt" and append some more text to it, e.g., "This is my first Git project!".
+Check Status and Add Changes:
+
+Use git status to see the status of your repository.
+Notice that "hello.txt" is listed as modified.
+Add and Commit Changes:
+
+Add and commit the changes with appropriate messages.
+View Commit History:
+
+Use git log to view the commit history.
+Take note of the commit messages and commit hashes.
+Reflection:
+
+Reflect on the process and the commands used.
+Consider the purpose of version control and how it helps in software development.
+Bonus Tasks:
+Create a new branch named "feature-branch".
+Make some changes to "hello.txt" in the feature branch and commit them.
+Merge the changes from the feature branch into the main branch.
