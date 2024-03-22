@@ -1,0 +1,14 @@
+If any device wants to connect to the internet, it will need an IP address -> That is also a public IP.
+2 kinds of IP addresses -> public and private 
+if you want to connect to the internet -> public IP
+If you don't want to connect to the internet but want to talk to a private network -> private IP
+
+Private IP range -> They are not unique, and they will not connect you to Internet
+
+10.0.0.0  ->  10.255.255.255
+172.16.0.0 -> 172.31.255.255
+192.168.0.0 -> 192.168.255.255
+
+How devices using private ip connect to public IP -> using Nat -> one public ip can be used by multiple devices .
+
+Public IP -> They are unique, and you can connect to internet
