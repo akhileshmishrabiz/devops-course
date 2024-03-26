@@ -115,6 +115,20 @@ minikube IP
 7. to access the application on minikube IP
 curl minikube-ip:node-port 
 
+####################  service type  #######
+NodePort: With a NodePort service, you can access your application using any node's IP address and the NodePort you specified in the Service definition. Get the NodePort by running:
+
+LoadBalancer: If you created a LoadBalancer service, Kubernetes provisions a load balancer in the cloud provider's infrastructure, and you can access your application using the external IP address provided by the load balancer.
+
+ClusterIP: With a ClusterIP service, the application is only accessible from within the Kubernetes cluster.
+
+Now use the LoadBalancer type service 
+
+######
+8. Edit the service
+kubectl edit svc my-service
+
+replace service type NodePort wit LoadBalancer, it will attach a external IP to service that can be used to access the application
 
 
 
