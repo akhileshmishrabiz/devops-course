@@ -1,0 +1,25 @@
+# Docs https://minikube.sigs.k8s.io/docs/start/
+
+# take an ec2 with min 2 cpu, 20 gb of disk 
+
+# Install docker
+sudo yum install docker -y
+sudo systemctl start docker
+sudo useradd -aG docker ec2-user
+
+# install kubctl 
+# https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.29.0/2024-01-04/bin/linux/amd64/kubectl
+
+
+# Install minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# start minikube cluster
+minikube start
+minikube status
+
+
+# kubectl get pods , kubectl get pods -A
+# kubectl get svc
