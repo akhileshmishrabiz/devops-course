@@ -1,0 +1,120 @@
+######## Create a pod with kubectl command #########
+1. create a file pod.yaml and paste the below content
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-pod
+spec:
+  containers:
+  - name: container-1
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
+2. run kubectl command to create the pod
+kubectl apply -f pod.yaml
+
+3. list the running pods
+kubectl get pods
+
+4. access the container application by port forwarding using kubectl port-forward
+kubectl port-forward first-pod  80:80
+
+5. modify the pod configuration
+kubectl edit pod first-pod
+
+6. Delete pod 
+kubectl delete pod first-pod
+
+
+############ Create a deployment ###########
+
+1. create a file my-deployment.yaml and paste the below configuration
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment  # Name of the deployment
+spec:
+  replicas: 3  # Number of desired replicas/instances of the pod to be maintained by the deployment
+  selector:
+    matchLabels:
+      app: my-app  # Labels used to match the pods managed by this deployment
+  template:
+    metadata:
+      labels:
+        app: my-app  # Labels applied to the pods managed by this deployment
+    spec:
+      containers:
+      - name: my-container  # Name of the container
+        image: nginx:latest  # Docker image to be used for the container
+        ports:
+        - containerPort: 80  # Port that the container exposes
+
+###########################
+-- apiVersion: Specifies the API version being used. In this case, it's apps/v1, which refers to the apps group and version 1 of the API. This version is used for Deployments.
+-- kind: Specifies the type of Kubernetes resource being defined. In this case, it's a Deployment, which manages a set of replicated Pods.
+-- metadata: Contains metadata about the Deployment, including its name (my-deployment). Metadata is used to uniquely identify and manage Kubernetes resources.
+-- spec: Defines the desired state of the Deployment
+-- replicas: Specifies the number of desired replicas (instances) of the Pod. In this case, it's set to 3, meaning the Deployment will ensure that there are always three instances of the Pod running.
+-- selector: Defines how the Deployment selects which Pods to manage. In this case, it uses label selectors to match Pods with the label app: my-app.
+-- template: Defines the Pod template used to create new Pods managed by the Deployment.
+-- metadata: Contains metadata for the Pod template.
+-- labels: Labels applied to the Pods created by this Deployment. These labels are used for selecting Pods.
+-- spec: Defines the specification for the Pods created by the Deployment.
+-- containers: Specifies the containers that should be run in the Pod.
+-- name: Specifies the name of the container (my-container).
+-- image: Specifies the Docker image to be used for the container (nginx:latest).
+-- ports: Specifies the ports to expose on the container. In this case, it exposes port 80 on the container.
+######################
+
+
+2. kubectl apply -f my-deployment.yaml  # run a deployment
+3. kubectl get deployments   # Access the deployment
+4.  kubectl get po # list pods -> same like kubectl get pods 
+5. To access an application deployed via a Deployment in Kubernetes, you typically expose the application using a Service
+
+
+#################### Create a service #########
+
+1. create the service config file
+vi service.yaml
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: NodePort
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+
+2. Deploy the service
+kubectl apply -f service.yaml
+
+3. list service
+kubectl get service   # or kubectl get svc
+
+4. Locate the Node IP
+kubectl get nodes -o wide
+
+5. access the application with node IP
+http://<node-ip>:node-port
+
+6. incase of minikube, we use minikube ip 
+minikube IP
+
+7. to access the application on minikube IP
+curl minikube-ip:node-port 
+
+
+
+
