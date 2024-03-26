@@ -1,0 +1,21 @@
+## Kubernetes architecture
+
+Master Node
+
+Worker Node
+
+
+
+
+## kubernetes components
+pod
+deployment
+service and its type
+
+configmap
+secret
+
+############### Explaining config files #########
+
+Kind
+Selector lables
