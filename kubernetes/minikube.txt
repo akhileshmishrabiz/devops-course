@@ -5,7 +5,7 @@
 # Install docker
 sudo yum install docker -y
 sudo systemctl start docker
-sudo useradd -aG docker ec2-user
+sudo usermod -aG docker ec2-user
 
 # install kubctl 
 # https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
