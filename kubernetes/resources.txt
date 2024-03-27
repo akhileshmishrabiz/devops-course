@@ -1,5 +1,6 @@
+YAML: https://www.youtube.com/watch?v=o9pT9cWzbnI&list=PL2We04F3Y_43dAehLMT5GxJhtk3mJtkl5&index=6
 
-Kubernetes playlist by KodeKloud
+Kubernetes playlist by KodeKloud -> some videos are good
 https://www.youtube.com/watch?v=QJ4fODH6DXI&list=PL2We04F3Y_43dAehLMT5GxJhtk3mJtkl5
 
 
