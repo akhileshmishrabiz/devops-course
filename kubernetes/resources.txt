@@ -1,0 +1,14 @@
+
+
+
+
+# kubernetes API's 
+https://www.youtube.com/watch?v=_65Md2qar14
+# kubernetes ingress
+https://www.youtube.com/watch?v=GhZi4DxaxxE&t=689
+
+# kubernetes security
+https://www.youtube.com/watch?v=L_ej12aahNI
+
+# open lens
+https://www.youtube.com/watch?v=VOruC2tQbmw
