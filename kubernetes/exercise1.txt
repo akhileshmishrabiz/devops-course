@@ -119,7 +119,7 @@ kubectl get nodes -o wide
 http://<node-ip>:node-port
 
 6. incase of minikube, we use minikube ip 
-minikube IP
+minikube ip
 
 7. to access the application on minikube IP
 curl minikube-ip:node-port 
