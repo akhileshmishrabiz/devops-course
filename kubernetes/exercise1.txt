@@ -1,3 +1,11 @@
+## Prerequisite:  - connect to remote server running minikube
+
+ssh-keygen -t rsa -b 2048  # choose default-options
+copy the public key and paste to .ssh/authorized_keys file 
+chmod 400 ~/.ssh/id_rsa # update permission on private key
+ssh -i ~/.ssh/id_rsa ec2-user@your_ec2_IP
+
+
 ######## Create a pod with kubectl command #########
 1. create a file pod.yaml and paste the below content
 ---
