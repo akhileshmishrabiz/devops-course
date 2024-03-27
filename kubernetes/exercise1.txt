@@ -17,7 +17,8 @@ kubectl apply -f pod.yaml
 
 3. list the running pods
 kubectl get pods
-
+3.1 Describe pod
+kubectl describe pod <podname>
 4. access the container application by port forwarding using kubectl port-forward
 kubectl port-forward first-pod  80:80
 
