@@ -6,6 +6,14 @@ chmod 400 ~/.ssh/id_rsa # update permission on private key
 ssh -i ~/.ssh/id_rsa ec2-user@your_ec2_IP
 
 
+### minukube start
+minukube start
+minikube status
+
+kubectl get pods (po, pod , pods)
+kubectl get node
+kubectl get services (or kubectl get svc)
+
 ######## Create a pod with kubectl command #########
 1. create a file pod.yaml and paste the below content
 ---
