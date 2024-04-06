@@ -1,0 +1,6 @@
+# Using namespaces in kubernetes
+
+kubectl get namespace 
+
+kubectl create namespace my-namespc 
+
