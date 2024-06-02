@@ -1,0 +1,59 @@
+S3 classes:
+
+https://aws.amazon.com/s3/storage-classes/
+
+Amazon S3 offers a variety of storage classes to help users optimize their storage costs by selecting the appropriate class for different data usage patterns. Here's an overview of the different S3 storage classes:
+
+### 1. S3 Standard
+- **Use Case**: Frequently accessed data.
+- **Description**: The default storage class. It provides high durability, availability, and performance. Suitable for a wide range of use cases, including cloud applications, dynamic websites, content distribution, and data analytics.
+- **Durability**: 99.999999999% (11 nines).
+- **Availability**: 99.99%.
+- **Cost**: Higher compared to other storage classes.
+
+### 2. S3 Intelligent-Tiering
+- **Use Case**: Unknown or changing access patterns.
+- **Description**: Automatically moves data between two access tiers (frequent and infrequent access) when access patterns change. It is ideal for data with unpredictable or unknown access patterns.
+- **Durability**: 99.999999999% (11 nines).
+- **Availability**: 99.9% (frequent access tier), 99% (infrequent access tier).
+- **Cost**: Monitoring and automation fees apply, but it can save costs by automatically moving data to the most cost-effective access tier.
+
+### 3. S3 Standard-IA (Infrequent Access)
+- **Use Case**: Infrequently accessed data that still needs to be retrieved quickly.
+- **Description**: Suitable for data that is accessed less frequently but requires rapid access when needed. It's ideal for long-term storage, backups, and disaster recovery.
+- **Durability**: 99.999999999% (11 nines).
+- **Availability**: 99.9%.
+- **Cost**: Lower storage cost compared to S3 Standard, but higher retrieval fees.
+
+### 4. S3 One Zone-IA
+- **Use Case**: Infrequently accessed data that does not require multiple Availability Zone resilience.
+- **Description**: Similar to Standard-IA, but data is stored in a single Availability Zone. Suitable for storing secondary backups or data that can be recreated if lost.
+- **Durability**: 99.999999999% (11 nines) in a single AZ.
+- **Availability**: 99.5%.
+- **Cost**: Lower storage cost compared to Standard-IA, but higher retrieval fees and less resilience.
+
+### 5. S3 Glacier
+- **Use Case**: Long-term archival and digital preservation.
+- **Description**: Designed for data archiving where retrieval times of minutes to hours are acceptable. Ideal for data that is rarely accessed.
+- **Durability**: 99.999999999% (11 nines).
+- **Availability**: Varies (retrieval times of minutes to hours).
+- **Cost**: Very low storage cost, but higher retrieval fees.
+
+### 6. S3 Glacier Deep Archive
+- **Use Case**: Long-term data archiving with retrieval times of hours.
+- **Description**: The lowest-cost storage option for archiving data that is rarely accessed. Suitable for long-term digital preservation.
+- **Durability**: 99.999999999% (11 nines).
+- **Availability**: Varies (retrieval times of up to 12 hours).
+- **Cost**: The lowest storage cost, but higher retrieval fees and longer retrieval times.
+
+### 7. S3 Outposts
+- **Use Case**: Data residency requirements and local data processing.
+- **Description**: S3 on AWS Outposts provides object storage for applications that need to meet local data residency requirements or need to process data locally.
+- **Durability**: 99.999999999% (11 nines) within an Outpost.
+- **Availability**: Varies (local storage).
+- **Cost**: Higher due to the local infrastructure requirements.
+
+### Summary
+Each S3 storage class is designed to cater to different use cases based on data access frequency, durability, and cost requirements. By selecting the appropriate storage class, users can optimize their storage costs while meeting their performance and durability needs.
+
+
