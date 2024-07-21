@@ -132,8 +132,11 @@ minikube ip
 7. to access the application on minikube IP
 curl minikube-ip:node-port 
 
-8. scale deployment
+8. scale up deployment
 kubectl scale --replicas=5 deployment my-deployment
+
+9. scale down
+kubectl scale --replicas=2  deployment my-deployment
 
 ####################  service type  #######
 NodePort: With a NodePort service, you can access your application using any node's IP address and the NodePort you specified in the Service definition. Get the NodePort by running:
