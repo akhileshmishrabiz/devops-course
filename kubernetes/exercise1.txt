@@ -138,6 +138,11 @@ kubectl scale --replicas=5 deployment my-deployment
 9. scale down
 kubectl scale --replicas=2  deployment my-deployment
 
+################################# Namespace
+kubectl create namespace akhilesh
+kubectl apply -f deployment.yml -n akhilesh
+kubectl apply -f service.yml -namescpace akhilesh
+
 ####################  service type  #######
 NodePort: With a NodePort service, you can access your application using any node's IP address and the NodePort you specified in the Service definition. Get the NodePort by running:
 
