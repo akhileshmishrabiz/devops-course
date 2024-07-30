@@ -3,11 +3,13 @@ git diff commit-hash1 commit-hash2 # shows the difference in both commits
 git checkout filename # to undo the changes in an unstaged file
 git commit --amend -m "commit message " # to change the commit message, this will change the commit hash as well
 git commit --amend  # to change the commit message without changing the commit hash
+git stash # to save your uncommitted changes temporarily and 
+git stash pop # to bring them back when you're ready.
 git cherry-pick commit-hash #Copy the commit to the current branch
 
 git reset --soft commit-hash # It will remove the commit but it will keep the changed file in the staging area.
-git reset commit-hash $ this is mixed reset(default).It will remove the commit and also move the changed files to working directory, i.e. it will un-stage the changes.
-git reset --hard commit-hash # will remove the commit and remove changes from all tracked files. These tracked files will be moved to state of the last commit. This will not touch any untracked files.
+git reset commit-hash $ this is mixed reset(default).It will remove the commit and also move the changed files to the working directory, i.e. it will un-stage the changes.
+git reset --hard commit-hash # will remove the commit and remove changes from all tracked files. These tracked files will be moved to the state of the last commit. This will not touch any untracked files.
 
 git clean -df # will clean up all untraced directories and files
 
